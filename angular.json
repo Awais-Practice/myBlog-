@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "digitaloceanBlog"
+    }
+  },
+  "defaultProject": "digitaloceanBlog",
+  "cli": {
+    "analytics": "b21551be-9b11-444e-bbdd-5eb786efe611"
+  }
 }
