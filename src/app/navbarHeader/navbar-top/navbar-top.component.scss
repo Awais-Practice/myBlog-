@@ -1,0 +1,28 @@
+.top_nav
+{
+  border-bottom: 1px solid lightgray;
+  height: 40px;
+  .badge{
+    color: #002768;
+    font-weight: normal;
+    font-size: 13px;
+  }
+  a
+  {
+    color: gray;
+    font-size: 12px;
+    font-weight:bold;
+  }
+  a:hover{
+    text-decoration: none;
+    color: #0069ff;
+  }
+  .top_headerNave{
+    display: flex;
+   justify-content: flex-end;
+   padding-right: 35px;
+   a{
+    margin-left: 28px;
+   }
+  }
+}

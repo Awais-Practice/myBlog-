@@ -1,0 +1,36 @@
+#main_header
+{
+  border-bottom:1px solid thistle;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+
+.logo{
+  display: flex;
+    align-items: center;
+    img{
+      height: 27px;
+      width: 172px;
+    }
+}
+
+  .top_headerNave
+  {
+    a{
+      margin: 12px;
+      color: #031b4f;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: system-ui;
+
+    }
+    :hover{
+      color: blue;
+      text-decoration: none;
+
+    }
+  }
+  button{
+    margin: 10px;
+  }
+}
