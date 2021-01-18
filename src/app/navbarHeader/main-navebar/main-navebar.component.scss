@@ -1,9 +1,13 @@
+
+
 #main_header
 {
   border-bottom:1px solid thistle;
   height: 65px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+
 
 .logo{
   display: flex;
@@ -16,21 +20,37 @@
 
   .top_headerNave
   {
-    a{
+    button{
       margin: 12px;
-      color: #031b4f;
+      color: #ffffff;
       font-size: 14px;
       font-weight: 500;
       font-family: system-ui;
 
     }
-    :hover{
-      color: blue;
-      text-decoration: none;
+    .signInBtn
+    {
+      color: #007bff;
+      &:hover{
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #007bff;
+
+      }
 
     }
+
   }
-  button{
-    margin: 10px;
+  ul li a{
+    color: #031b4f;
+    font-family: 'Sailec-Medium','Helvetica','san-serif';
+    font-size: 14px;
+    font-weight: 600;
+    &:hover{
+      color: blue;
+    }
   }
+
+
+
 }
