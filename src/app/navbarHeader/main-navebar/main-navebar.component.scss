@@ -3,10 +3,9 @@
 #main_header
 {
   border-bottom:1px solid thistle;
-  height: 65px;
+  min-height: 65px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
 
 .logo{

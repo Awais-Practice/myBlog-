@@ -1,17 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
-p{
+p {
   padding: 0px;
   margin: 0px;
 }
-.mat-typography p
-{
+.mat-typography p {
   margin: 0px;
 }
+.primeryColor {
+  color: #0b1b4f;
+}
 
-html, body { height: 100%; }
-body { margin: 0;
-   font-family: Roboto, "Helvetica Neue", sans-serif;
-   box-sizing: border-box;
-
-  }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+.mat-tab-labels {
+  display: flex;
+  flex-direction: column !important;
+}
