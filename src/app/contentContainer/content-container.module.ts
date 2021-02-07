@@ -6,6 +6,12 @@ import { FeaturedPostsComponent } from './featured-posts/featured-posts.componen
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { BlogTopicsComponent } from './blog-topics/blog-topics.component';
+import { FooterComponent } from './footer/footer.component';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
+
 
 
 
@@ -16,11 +22,12 @@ import { BlogTopicsComponent } from './blog-topics/blog-topics.component';
     NewOfferComponent,
     FeaturedPostsComponent,
     BlogTopicsComponent,
+    FooterComponent,
 
 
   ],
   imports: [
-    CommonModule,MatButtonModule,MatCardModule
+    CommonModule,MatButtonModule,MatCardModule,MatSelectModule
 
   ],
   exports:[

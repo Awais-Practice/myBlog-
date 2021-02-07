@@ -1,12 +1,48 @@
 <div class="container-fluid" id="topicContainer">
+  <div class="dropdown">
+
+
+
+<!-- drop down container code start hear  -->
+<mat-form-field appearance="fill" class="topicDropdown">
+  <mat-label>TOPICS</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let topic of topics" [value]="topic.value">
+
+
+
+      <a
+      class="nav-link "
+      id="v-pills-home-tab"
+      data-bs-toggle="pill"
+      href="#v-pills-home"
+      role="tab"
+      aria-controls="v-pills-home"
+      aria-selected="true"
+      > {{topic.viewValue}}</a
+    >
+
+
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<!-- drop down container code start hear  -->
+
+
+
+
+
+</div>
   <div class="row">
+
     <div class="col-sm-10 m-auto p-2">
-      <span class="heading4">
+      <div class="heading4 d-none d-lg-block">
         <strong> TOPICS </strong>
-      </span>
+      </div>
       <div class="d-flex align-items-start">
+
         <div
-          class="nav flex-column me-3 tabs"
+          class="nav flex-column me-3  tabs 	d-none d-lg-block"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
@@ -55,6 +91,11 @@
             >Settings</a
           >
         </div>
+
+
+
+
+
         <div class="tab-content" id="v-pills-tabContent">
           <div
             class="tab-pane fade show active"
@@ -83,7 +124,8 @@
                         <li>
                           <img
                             src="../../../assets/images/posts1.jpeg"
-                            alt=""
+                            alt="" class="rounded-circle"
+
                           />
                         </li>
                         <li>
@@ -121,7 +163,7 @@
                       <ul>
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                             alt=""
                           />
                         </li>
@@ -160,7 +202,7 @@
                       <ul>
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                             alt=""
                           />
                         </li>
@@ -199,7 +241,7 @@
                       <ul>
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                             alt=""
                           />
                         </li>
@@ -246,7 +288,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -285,7 +327,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -324,7 +366,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -370,7 +412,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -410,6 +452,44 @@
                       <li>
                         <img
                           src="../../../assets/images/posts3.jpg"
+                        />
+                      </li>
+                      <li>
+                        <h5 class="card-title">
+                          <a href="">Shantanu Kedar</a> on
+                          <a href=""> Developer Relations </a> 2023-01-12
+                        </h5>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="card-text">
+                    DigitalOcean Droplets are on-demand, Linux virtual
+                    machines suit ...
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>            <div>
+            <ul>
+              <li>
+                <img
+                  src="../../../assets/images/feture1.jpg"
+                  alt="Card image cap"
+                  width="206"
+                  height="116"
+                />
+              </li>
+              <li>
+                <div class="card-body">
+                  <div id="postWriter">
+                    <span class="primeryColor heading2">
+                      Jump-start your startup with DigitalOcean App Platform
+                    </span>
+                    <ul>
+                      <li>
+                        <img
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -448,7 +528,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -487,46 +567,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <h5 class="card-title">
-                          <a href="">Shantanu Kedar</a> on
-                          <a href=""> Developer Relations </a> 2023-01-12
-                        </h5>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <p class="card-text">
-                    DigitalOcean Droplets are on-demand, Linux virtual
-                    machines suit ...
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>            <div>
-            <ul>
-              <li>
-                <img
-                  src="../../../assets/images/feture1.jpg"
-                  alt="Card image cap"
-                  width="206"
-                  height="116"
-                />
-              </li>
-              <li>
-                <div class="card-body">
-                  <div id="postWriter">
-                    <span class="primeryColor heading2">
-                      Jump-start your startup with DigitalOcean App Platform
-                    </span>
-                    <ul>
-                      <li>
-                        <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -572,7 +613,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -611,7 +652,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -650,7 +691,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -689,7 +730,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -728,7 +769,7 @@
                     <ul>
                       <li>
                         <img
-                          src="../../../assets/images/avtar1.jpeg"
+                          src="../../../assets/images/avtar1.jpeg" class="rounded-circle"
                           alt=""
                         />
                       </li>
@@ -754,3 +795,19 @@
     </div>
   </div>
 </div>
+
+
+
+
+<!--
+<div class="dropdown show">
+  <a class="secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown link
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div> -->

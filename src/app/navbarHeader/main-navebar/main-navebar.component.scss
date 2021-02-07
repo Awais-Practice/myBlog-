@@ -2,18 +2,22 @@
 
 #main_header
 {
-  border-bottom:1px solid thistle;
   min-height: 65px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 98%;
+  margin: auto;
+
 
 
 .logo{
   display: flex;
-    align-items: center;
+  align-items: center;
+
     img{
-      height: 27px;
-      width: 172px;
+      height: 30px;
+      width: 170px;
     }
 }
 
@@ -40,16 +44,18 @@
     }
 
   }
+  #navbarSupportedContent{
+
   ul li a{
     color: #031b4f;
-    font-family: 'Sailec-Medium','Helvetica','san-serif';
+    font-family: 'Inter-Medium','Helvetica','san-serif';
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     &:hover{
       color: blue;
     }
   }
 
-
+  }
 
 }

@@ -5,13 +5,18 @@
   .badge{
     color: #002768;
     font-weight: normal;
-    font-size: 13px;
+    font-size: 9px;
+    width: 36px;
+    height: 19px;
+    line-height: 16px;
+    background-color: #00d7d2;
+
   }
   a
   {
     color: gray;
     font-size: 12px;
-    font-weight:bold;
+    font-family: inherit;
   }
   a:hover{
     text-decoration: none;
