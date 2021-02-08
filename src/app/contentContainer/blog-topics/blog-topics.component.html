@@ -1,7 +1,10 @@
 <div class="container-fluid" id="topicContainer">
   <div class="dropdown">
-    <!-- dropdown container code start hear  -->
-    <mat-form-field appearance="fill" class="topicDropdown  d-lg-none .d-md-block" >
+    <!-- dropdown container code start  here -->
+    <mat-form-field
+      appearance="fill"
+      class="topicDropdown d-lg-none .d-md-block"
+    >
       <mat-label>TOPICS</mat-label>
       <mat-select [(value)]="topic">
         <mat-option *ngFor="let topic of topics" [value]="topic.value">
@@ -9,17 +12,16 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <!-- dropdown container code start hear  -->
+    <!-- dropdown container code start  here -->
   </div>
   <div class="row">
-    <div class="col-sm-10 m-auto p-2 " >
-
+    <div class="col-sm-10 m-auto p-2">
       <div class="heading4 d-none d-lg-block">
         <strong> TOPICS </strong>
       </div>
       <div class="d-flex align-items-start">
         <div
-          class="nav flex-column me-3 tabs    d-none d-lg-block"
+          class="nav flex-column me-3 tabs d-none d-lg-block"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
@@ -243,7 +245,6 @@
               </ul>
             </div>
           </div>
-
 
           <div
             [ngClass]="{ 'show active': topic === 'profile-1' }"
@@ -798,21 +799,17 @@
               </ul>
             </div>
           </div>
+          <div class="container topicButtons d-flex">
+            <div class="mr-auto p-2">
+              <button mat-stroked-button color="primary">Newer Posts</button>
+            </div>
+            <div class="p-2">
+              <button mat-stroked-button color="primary">Older Posts</button>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!--
-<div class="dropdown show">
-  <a class="secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div> -->

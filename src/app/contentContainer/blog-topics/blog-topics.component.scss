@@ -49,9 +49,27 @@
  }
 }
 
+.topicButtons{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
 ::ng-deep{
   .mat-form-field-underline{
     display: none;
   }
+  .mat-stroked-button{
+    padding: 7px 37px !important;
+
+  }
+
+  .mat-stroked-button:not([class*=mat-elevation-z]){
+    border: 1px solid #1369ff;
+    font-size: 17px;
+    outline: none;
+  }
+
+
 }
 
