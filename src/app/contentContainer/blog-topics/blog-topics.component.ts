@@ -14,7 +14,7 @@ export class BlogTopicsComponent implements OnInit {
   topics: Topics[] = [
     { value: 'home-0', viewValue: 'Home' },
     { value: 'profile-1', viewValue: 'Profile' },
-    { value: 'messgesa-2', viewValue: 'Messages' },
+    { value: 'messages-2', viewValue: 'Messages' },
     { value: 'settings-2', viewValue: 'Settings' },
   ];
 

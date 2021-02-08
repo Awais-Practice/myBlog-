@@ -29,11 +29,13 @@
       border-top: 1px solid #908787;
       padding-top: 30px;
       margin-top: 40px;
+      .row{margin: auto;}
 
       .f_right {
           display: flex;
           flex-direction: row;
           align-items: center;
+
 
           .f_text {
 

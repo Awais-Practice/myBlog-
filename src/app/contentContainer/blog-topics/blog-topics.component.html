@@ -1,34 +1,25 @@
 <div class="container-fluid" id="topicContainer">
   <div class="dropdown">
-    <!-- drop down container code start hear  -->
-    <mat-form-field appearance="fill" class="topicDropdown">
+    <!-- dropdown container code start hear  -->
+    <mat-form-field appearance="fill" class="topicDropdown  d-lg-none .d-md-block" >
       <mat-label>TOPICS</mat-label>
       <mat-select [(value)]="topic">
         <mat-option *ngFor="let topic of topics" [value]="topic.value">
-          <a
-            class="nav-link"
-            id="v-pills-home-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-home"
-            role="tab"
-            aria-controls="v-pills-home"
-            aria-selected="true"
-          >
-            {{ topic.viewValue }}</a
-          >
+          {{ topic.viewValue }}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <!-- drop down container code start hear  -->
+    <!-- dropdown container code start hear  -->
   </div>
   <div class="row">
-    <div class="col-sm-10 m-auto p-2">
+    <div class="col-sm-10 m-auto p-2 " >
+
       <div class="heading4 d-none d-lg-block">
         <strong> TOPICS </strong>
       </div>
       <div class="d-flex align-items-start">
         <div
-          class="nav flex-column me-3 tabs d-none d-lg-block"
+          class="nav flex-column me-3 tabs    d-none d-lg-block"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
@@ -103,7 +94,7 @@
                       <span class="primeryColor heading2">
                         Jump-start your startup with DigitalOcean App Platform
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
                             src="../../../assets/images/posts1.jpeg"
@@ -120,7 +111,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -144,7 +135,7 @@
                       <span class="primeryColor heading2">
                         Jump-start your startup with DigitalOcean App Platform
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
                             src="../../../assets/images/avtar1.jpeg"
@@ -161,7 +152,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -185,7 +176,7 @@
                       <span class="primeryColor heading2">
                         Jump-start your startup with DigitalOcean App Platform
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
                             src="../../../assets/images/avtar1.jpeg"
@@ -202,7 +193,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -226,7 +217,7 @@
                       <span class="primeryColor heading2">
                         Jump-start your startup with DigitalOcean App Platform
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
                             src="../../../assets/images/avtar1.jpeg"
@@ -243,7 +234,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -252,6 +243,8 @@
               </ul>
             </div>
           </div>
+
+
           <div
             [ngClass]="{ 'show active': topic === 'profile-1' }"
             class="tab-pane fade"
@@ -292,7 +285,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -333,7 +326,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -374,7 +367,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -387,7 +380,7 @@
             class="tab-pane fade"
             id="v-pills-messages"
             role="tabpanel"
-            [ngClass]="{ 'show active': topic === 'messgesa-2' }"
+            [ngClass]="{ 'show active': topic === 'messages-2' }"
             aria-labelledby="v-pills-messages-tab"
           >
             <div>
@@ -423,7 +416,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -460,7 +453,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -501,7 +494,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -542,7 +535,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -583,7 +576,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -632,7 +625,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -673,7 +666,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -714,7 +707,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -755,7 +748,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
@@ -796,7 +789,7 @@
                       </ul>
                     </div>
 
-                    <p class="card-text">
+                    <p class="card-text d-none d-lg-block">
                       DigitalOcean Droplets are on-demand, Linux virtual
                       machines suit ...
                     </p>
