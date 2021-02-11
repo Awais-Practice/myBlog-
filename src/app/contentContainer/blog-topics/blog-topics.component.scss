@@ -1,75 +1,69 @@
 .example-stretched-tabs {
   max-width: 800px;
 }
-#topicContainer
-{
+#topicContainer {
   padding-top: 70px;
-  .heading4{
+  .heading4 {
     font-family: Sailec-Bold, Helvetica, san-serif;
     font-size: 14px;
     line-height: 17px;
-    letter-spacing: 1px;
     text-transform: uppercase;
     color: rgb(153, 161, 179);
     display: block;
     margin-bottom: 20px;
-
   }
-  .tabs{
+  .tabs {
     padding-right: 50px;
-   a{
-    border-radius:20px;
-    width: 200px;
-    color: #6a7092;
-    &:hover
-    {
-      background-color: #f2f8ff;
-      color: blue;
+    a {
+      border-radius: 20px;
+      width: 200px;
+      color: #6a7092;
+      &:hover {
+        background-color: #f2f8ff;
+        color: blue;
+      }
     }
   }
- }
- .tab-content
- {
-   ul{
-     display: flex;
-     flex-direction: row;
-     list-style: none;
-   }
- }
+  .tab-content {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+    }
+  }
+  #postWriter {
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+  }
 }
-.card-body
-{
+.card-body {
   padding-top: 0px;
 }
-.dropdown
-{
- .topicDropdown
- {
-   width: 100%;
- }
+.dropdown {
+  .topicDropdown {
+    width: 100%;
+  }
 }
 
-.topicButtons{
+.topicButtons {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-
-::ng-deep{
-  .mat-form-field-underline{
+::ng-deep {
+  .mat-form-field-underline {
     display: none;
   }
-  .mat-stroked-button{
+  .mat-stroked-button {
     padding: 7px 37px !important;
-
   }
 
-  .mat-stroked-button:not([class*=mat-elevation-z]){
+  .mat-stroked-button:not([class*="mat-elevation-z"]) {
     border: 1px solid #1369ff;
     font-size: 17px;
     outline: none;
   }
-
-
 }
-

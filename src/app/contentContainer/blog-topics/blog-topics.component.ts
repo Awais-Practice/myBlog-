@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 interface Topics {
   value: string;
   viewValue: string;
 }
+import { PostDataService } from '../shared/post-data.service';
 
 @Component({
   selector: 'app-blog-topics',
@@ -18,7 +20,11 @@ export class BlogTopicsComponent implements OnInit {
     { value: 'settings-2', viewValue: 'Settings' },
   ];
 
-  constructor() {}
+  constructor(private blogTopicsComponent: PostDataService) {}
+  topicsPostsHome = this.blogTopicsComponent.topicPostsHome;
+  topicPostsProfile = this.blogTopicsComponent.topicPostsProfile;
+  topicPostsMessages = this.blogTopicsComponent.topicPostsMessages;
+  topicPostsSettings = this.blogTopicsComponent.topicPostsSettings;
 
   ngOnInit(): void {}
 }

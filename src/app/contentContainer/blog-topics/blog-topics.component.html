@@ -80,11 +80,12 @@
             aria-labelledby="v-pills-home-tab"
           >
             <!-- style="width: 35rem" -->
-            <div>
+
+            <div *ngFor="let topicPostHome of topicsPostsHome">
               <ul>
                 <li>
                   <img
-                    src="../../../assets/images/feture1.jpg"
+                    src="../../../assets/images/{{ topicPostHome.postImg }}"
                     alt="Card image cap"
                     width="206"
                     height="116"
@@ -94,151 +95,33 @@
                   <div class="card-body">
                     <div id="postWriter">
                       <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
+                        {{ topicPostHome.postTitle }}
                       </span>
                       <ul class="d-none d-lg-block">
                         <li>
                           <img
-                            src="../../../assets/images/posts1.jpeg"
-                            alt=""
-                            class="rounded-circle"
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts2.jpeg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/{{
+                              topicPostHome.postAuthor.avatarImg
+                            }}"
                             class="rounded-circle"
                             alt=""
                           />
                         </li>
                         <li>
                           <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
+                            <a href="">{{ topicPostHome.postAuthor.name }}</a>
+                            on
+                            <a href=""
+                              >{{ topicPostHome.postAuthor.authorPost }}
+                            </a>
+                            {{ topicPostHome.creationDate }}
                           </h5>
                         </li>
                       </ul>
                     </div>
 
                     <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts3.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts1.jpeg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
+                      {{ topicPostHome.description }}
                     </p>
                   </div>
                 </li>
@@ -253,11 +136,11 @@
             role="tabpanel"
             aria-labelledby="v-pills-profile-tab"
           >
-            <div>
+            <div *ngFor="let profileTopicPost of topicPostsProfile">
               <ul>
                 <li>
                   <img
-                    src="../../../assets/images/posts2.jpeg"
+                    src="../../../assets/images/{{ profileTopicPost.postImg }}"
                     alt="Card image cap"
                     width="206"
                     height="116"
@@ -267,110 +150,35 @@
                   <div class="card-body">
                     <div id="postWriter">
                       <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
+                        {{ profileTopicPost.postTitle }}
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/{{
+                              profileTopicPost.postAuthor.avatarImg
+                            }}"
                             class="rounded-circle"
                             alt=""
                           />
                         </li>
                         <li>
                           <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
+                            <a href="">{{
+                              profileTopicPost.postAuthor.name
+                            }}</a>
+                            on
+                            <a href=""
+                              >{{ profileTopicPost.postAuthor.authorPost }}
+                            </a>
+                            {{ profileTopicPost.creationDate }}
                           </h5>
                         </li>
                       </ul>
                     </div>
 
                     <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts3.jpeg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts3.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
+                      {{ profileTopicPost.description }}
                     </p>
                   </div>
                 </li>
@@ -384,11 +192,11 @@
             [ngClass]="{ 'show active': topic === 'messages-2' }"
             aria-labelledby="v-pills-messages-tab"
           >
-            <div>
+            <div *ngFor="let topicPostMessage of topicPostsMessages">
               <ul>
                 <li>
                   <img
-                    src="../../../assets/images/posts1.jpeg"
+                    src="../../../assets/images/{{ topicPostMessage.postImg }}"
                     alt="Card image cap"
                     width="206"
                     height="116"
@@ -398,188 +206,35 @@
                   <div class="card-body">
                     <div id="postWriter">
                       <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
+                        {{ topicPostMessage.postTitle }}
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/{{
+                              topicPostMessage.postAuthor.avatarImg
+                            }}"
                             class="rounded-circle"
                             alt=""
                           />
                         </li>
                         <li>
                           <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
+                            <a href="">{{
+                              topicPostMessage.postAuthor.name
+                            }}</a>
+                            on
+                            <a href=""
+                              >{{ topicPostMessage.postAuthor.authorPost }}
+                            </a>
+                            {{ topicPostMessage.creationDate }}
                           </h5>
                         </li>
                       </ul>
                     </div>
 
                     <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/posts3.jpeg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img src="../../../assets/images/posts3.jpg" />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
+                      {{ topicPostMessage.description }}
                     </p>
                   </div>
                 </li>
@@ -593,11 +248,11 @@
             role="tabpanel"
             aria-labelledby="v-pills-settings-tab"
           >
-            <div>
+            <div *ngFor="let topicPostSetting of topicPostsSettings">
               <ul>
                 <li>
                   <img
-                    src="../../../assets/images/feture1.jpg"
+                    src="../../../assets/images/{{ topicPostSetting.postImg }}"
                     alt="Card image cap"
                     width="206"
                     height="116"
@@ -607,192 +262,35 @@
                   <div class="card-body">
                     <div id="postWriter">
                       <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
+                        {{ topicPostSetting.postTitle }}
                       </span>
-                      <ul>
+                      <ul class="d-none d-lg-block">
                         <li>
                           <img
-                            src="../../../assets/images/avtar1.jpeg"
+                            src="../../../assets/images/{{
+                              topicPostSetting.postAuthor.avatarImg
+                            }}"
                             class="rounded-circle"
                             alt=""
                           />
                         </li>
                         <li>
                           <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
+                            <a href="">{{
+                              topicPostSetting.postAuthor.name
+                            }}</a>
+                            on
+                            <a href=""
+                              >{{ topicPostSetting.postAuthor.authorPost }}
+                            </a>
+                            {{ topicPostSetting.creationDate }}
                           </h5>
                         </li>
                       </ul>
                     </div>
 
                     <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/feture1.jpg"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        Jump-start your startup with DigitalOcean App Platform
-                      </span>
-                      <ul>
-                        <li>
-                          <img
-                            src="../../../assets/images/avtar1.jpeg"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">Shantanu Kedar</a> on
-                            <a href=""> Developer Relations </a> 2023-01-12
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      DigitalOcean Droplets are on-demand, Linux virtual
-                      machines suit ...
+                      {{ topicPostSetting.description }}
                     </p>
                   </div>
                 </li>
@@ -806,7 +304,6 @@
             <div class="p-2">
               <button mat-stroked-button color="primary">Older Posts</button>
             </div>
-
           </div>
         </div>
       </div>

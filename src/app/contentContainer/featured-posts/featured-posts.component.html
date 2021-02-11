@@ -1,93 +1,44 @@
 <div id="featured_posts" class="mt-auto">
   <div class="featuredPost row">
-    <div class="heading1 col-lg-12 col-11 offset-lg-0 offset-1">Featured posts</div>
-    <div class="row m-auto d-flex" >
-      <div class="col-lg-4 col-xs-12" >
-        <div class="card" >
+    <div class="heading1 col-lg-12 col-11 offset-lg-0 offset-1">
+      Featured posts
+    </div>
+    <div class="row m-auto d-flex">
+      <!-- Featured posts start hear -->
+      <div class="col-lg-4 col-xs-12" *ngFor="let post of featuredPosts">
+        <div class="card">
           <img
             class="card-img-top"
-            src="../../../assets/images/feture1.jpg"
+            src="../../../assets/images/{{ post.postImg }}"
             alt="Card image cap"
           />
           <div class="card-body">
             <div id="postWriter">
               <ul>
-                <li><img src="../../../assets/images/avtar1.jpeg" alt="" class="rounded-circle"/></li>
+                <li>
+                  <img
+                    src="../../../assets/images/avtar1.jpeg"
+                    alt=""
+                    class="rounded-circle"
+                  />
+                </li>
                 <li>
                   <h5 class="card-title">
-                    <a href="">Shantanu Kedar</a> on
-                    <a href=""> Developer Relations </a> 2023-01-12
+                    <a href="">{{ post.postAuthor.name }}</a> on
+                    <a href="">
+                      {{ post.postAuthor.authorPost }}
+                    </a>
+                    {{ post.creationDate }}
                   </h5>
                 </li>
               </ul>
               <span class="primeryColor heading2">
-                Jump-start your startup with DigitalOcean App Platform
+                {{ post.postTitle }}
               </span>
             </div>
 
             <p class="card-text">
-              Starting a business is hard, we get it. It wasn’t so long ago that
-              DigitalOcean was there too. There’s a lot to tackle a
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-xs-12 ">
-        <div class="card" >
-          <img
-            class="card-img-top"
-            src="../../../assets/images/feature2.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <div id="postWriter">
-              <ul>
-                <li><img src="../../../assets/images/avtar1.jpeg" alt="" class="rounded-circle" /></li>
-                <li>
-                  <h5 class="card-title">
-                    <a href="">Shantanu Kedar</a> on
-                    <a href=""> Developer Relations </a> 2023-01-12
-                  </h5>
-                </li>
-              </ul>
-              <span class="primeryColor heading2">
-                Jump-start your startup with DigitalOcean App Platform
-              </span>
-            </div>
-
-            <p class="card-text">
-              Starting a business is hard, we get it. It wasn’t so long ago that
-              DigitalOcean was there too. There’s a lot to tackle a
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-xs-12 mt-auto">
-        <div class="card" >
-          <img
-            class="card-img-top"
-            src="../../../assets/images/feature3.jpeg"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <div id="postWriter">
-              <ul>
-                <li><img src="../../../assets/images/avtar1.jpeg" alt="" class="rounded-circle"/></li>
-                <li>
-                  <h5 class="card-title">
-                    <a href="">Shantanu Kedar</a> on
-                    <a href=""> Developer Relations </a> 2023-01-12
-                  </h5>
-                </li>
-              </ul>
-              <span class="primeryColor heading2">
-                Jump-start your startup with DigitalOcean App Platform
-              </span>
-            </div>
-
-            <p class="card-text">
-              Starting a business is hard, we get it. It wasn’t so long ago that
-              DigitalOcean was there too. There’s a lot to tackle a
+              {{ post.description }}
             </p>
           </div>
         </div>
