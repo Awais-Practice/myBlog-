@@ -35,13 +35,7 @@
         </div>
 
         <div class="tab-content" id="v-pills-tabContent">
-          <div
-            [ngClass]="{ 'show active': topic === topic }"
-            class="tab-pane fade"
-            id="v-pills-home"
-            role="tabpanel"
-            aria-labelledby="v-pills-home-tab"
-          >
+          <div [ngClass]="{ 'show active': topic === topic }">
             <!-- style="width: 35rem" -->
 
             <div *ngFor="let topicPost of posts">
