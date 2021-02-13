@@ -4,7 +4,7 @@ interface Topics {
   value: string;
   viewValue: string;
 }
-import { PostDataService } from '../shared/post-data.service';
+import { PostDataService } from '../../shared/services/post-data.service';
 
 @Component({
   selector: 'app-blog-topics',

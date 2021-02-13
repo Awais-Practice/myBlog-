@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostDataService } from '../shared/post-data.service';
+import { PostDataService } from '../../shared/services/post-data.service';
 
 @Component({
   selector: 'app-featured-posts',

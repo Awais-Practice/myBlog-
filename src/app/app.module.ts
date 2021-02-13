@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarModule } from './navbarHeader/navbar/navbar.module';
-import { ContentContainerModule } from './contentContainer/content-container.module';
-import { from } from 'rxjs';
+import { NavbarHeaderModule } from './shared/navbar-header/navbar-header.module';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ContentModule } from './content/content.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule,
-    ContentContainerModule,
+    NavbarHeaderModule,
     BrowserAnimationsModule,
+    ContentModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
