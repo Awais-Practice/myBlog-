@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContentComponent } from './content.component';
+import { ContentComponent } from './home.component';
 import { NewOfferComponent } from './new-offer/new-offer.component';
 import { FeaturedPostsComponent } from './featured-posts/featured-posts.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,4 +18,4 @@ import { MatSelectModule } from '@angular/material/select';
   imports: [CommonModule, MatButtonModule, MatCardModule, MatSelectModule],
   exports: [ContentComponent, NewOfferComponent],
 })
-export class ContentModule {}
+export class HomeModule {}

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarHeaderModule } from './shared/navbar-header/navbar-header.module';
 import { FooterComponent } from './shared/footer/footer.component';
-import { ContentModule } from './content/content.module';
+import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     NavbarHeaderModule,
     BrowserAnimationsModule,
-    ContentModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
