@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContentComponent } from './home.component';
+import { HomeComponent } from './home.component';
 import { NewOfferComponent } from './new-offer/new-offer.component';
 import { FeaturedPostsComponent } from './featured-posts/featured-posts.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,12 +10,12 @@ import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
-    ContentComponent,
+    HomeComponent,
     NewOfferComponent,
     FeaturedPostsComponent,
     BlogTopicsComponent,
   ],
   imports: [CommonModule, MatButtonModule, MatCardModule, MatSelectModule],
-  exports: [ContentComponent, NewOfferComponent],
+  exports: [HomeComponent, NewOfferComponent],
 })
 export class HomeModule {}
