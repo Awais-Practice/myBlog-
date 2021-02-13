@@ -8,6 +8,7 @@ import { IPost } from './posts.model';
 export class PostDataService {
   featuredPosts: IPost[] = [
     {
+      category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
         name: 'Shantanu Kedar',
@@ -20,6 +21,7 @@ export class PostDataService {
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
     {
+      category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
         name: 'Shantanu Kedar',
@@ -32,6 +34,7 @@ export class PostDataService {
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
     {
+      category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
         name: 'Shantanu Kedar',
@@ -45,8 +48,9 @@ export class PostDataService {
     },
   ];
 
-  topicPostsHome: IPost[] = [
+  posts: IPost[] = [
     {
+      category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
         name: 'Shantanu Kedar',
@@ -59,6 +63,7 @@ export class PostDataService {
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
     {
+      category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
         name: 'Shantanu Kedar',
@@ -71,9 +76,10 @@ export class PostDataService {
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
     {
-      postImg: 'feture1.jpg',
+      category: 'profile',
+      postImg: 'feature2.png',
       postAuthor: {
-        name: 'Shantanu Kedar',
+        name: 'Shantanu awais',
         authorPost: 'Developer Relations',
         avatarImg: 'avtar1.jpeg',
       },
@@ -82,10 +88,47 @@ export class PostDataService {
       description:
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
-  ];
-
-  topicPostsProfile: IPost[] = [
     {
+      category: 'messages',
+      postImg: 'feature2.png',
+      postAuthor: {
+        name: 'Shantanu awais',
+        authorPost: 'Developer Relations',
+        avatarImg: 'avtar1.jpeg',
+      },
+      creationDate: '10-22-2021',
+      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      description:
+        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+    },
+    {
+      category: 'settings',
+      postImg: 'feature2.png',
+      postAuthor: {
+        name: 'Shantanu awais',
+        authorPost: 'Developer Relations',
+        avatarImg: 'avtar1.jpeg',
+      },
+      creationDate: '10-22-2021',
+      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      description:
+        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+    },
+    {
+      category: 'settings',
+      postImg: 'feature2.png',
+      postAuthor: {
+        name: 'Shantanu awais',
+        authorPost: 'Developer Relations',
+        avatarImg: 'avtar1.jpeg',
+      },
+      creationDate: '10-22-2021',
+      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      description:
+        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+    },
+    {
+      category: 'settings',
       postImg: 'feature2.png',
       postAuthor: {
         name: 'Shantanu awais',
@@ -98,70 +141,124 @@ export class PostDataService {
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
   ];
-  topicPostsMessages: IPost[] = [
-    {
-      postImg: 'feature3.jpeg',
-      postAuthor: {
-        name: 'Shantanu Kedar',
-        authorPost: 'Developer Relations',
-        avatarImg: 'avtar1.jpeg',
-      },
-      creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
-      description:
-        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
-    },
-  ];
-  topicPostsSettings: IPost[] = [
-    {
-      postImg: 'feature3.jpeg',
-      postAuthor: {
-        name: 'Shantanu Kedar',
-        authorPost: 'Developer Relations',
-        avatarImg: 'avtar1.jpeg',
-      },
-      creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
-      description:
-        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
-    },
-    {
-      postImg: 'feature3.jpeg',
-      postAuthor: {
-        name: 'Shantanu Kedar',
-        authorPost: 'Developer Relations',
-        avatarImg: 'avtar1.jpeg',
-      },
-      creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
-      description:
-        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
-    },
-    {
-      postImg: 'feature3.jpeg',
-      postAuthor: {
-        name: 'Shantanu Kedar',
-        authorPost: 'Developer Relations',
-        avatarImg: 'avtar1.jpeg',
-      },
-      creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
-      description:
-        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
-    },
-    {
-      postImg: 'feature3.jpeg',
-      postAuthor: {
-        name: 'Shantanu Kedar',
-        authorPost: 'Developer Relations',
-        avatarImg: 'avtar1.jpeg',
-      },
-      creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
-      description:
-        'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
-    },
-  ];
+
+  // topicPostsHome: IPost[] = [
+  //   {
+  //     postImg: 'feture1.jpg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  //   {
+  //     postImg: 'feture1.jpg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  //   {
+  //     postImg: 'feture1.jpg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  // ];
+
+  // topicPostsProfile: IPost[] = [
+  //   {
+  //     postImg: 'feature2.png',
+  //     postAuthor: {
+  //       name: 'Shantanu awais',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  // ];
+  // topicPostsMessages: IPost[] = [
+  //   {
+  //     postImg: 'feature3.jpeg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  // ];
+  // topicPostsSettings: IPost[] = [
+  //   {
+  //     postImg: 'feature3.jpeg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  //   {
+  //     postImg: 'feature3.jpeg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  //   {
+  //     postImg: 'feature3.jpeg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  //   {
+  //     postImg: 'feature3.jpeg',
+  //     postAuthor: {
+  //       name: 'Shantanu Kedar',
+  //       authorPost: 'Developer Relations',
+  //       avatarImg: 'avtar1.jpeg',
+  //     },
+  //     creationDate: '10-22-2021',
+  //     postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+  //     description:
+  //       'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
+  //   },
+  // ];
 
   constructor() {}
 }

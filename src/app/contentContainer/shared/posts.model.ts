@@ -1,4 +1,5 @@
 export interface IPost {
+  category: string;
   postImg: string;
   postAuthor: {
     name: string;

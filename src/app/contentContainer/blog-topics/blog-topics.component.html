@@ -27,53 +27,16 @@
           aria-orientation="vertical"
         >
           <a
-            class="nav-link active"
-            id="v-pills-home-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-home"
-            role="tab"
-            aria-controls="v-pills-home"
-            aria-selected="true"
-            >Home</a
-          >
-
-          <a
+            *ngFor="let category of topics"
+            (click)="topic = category.value"
             class="nav-link"
-            id="v-pills-profile-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-profile"
-            role="tab"
-            aria-controls="v-pills-profile"
-            aria-selected="false"
-            >Profile</a
-          >
-
-          <a
-            class="nav-link"
-            id="v-pills-messages-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-messages"
-            role="tab"
-            aria-controls="v-pills-messages"
-            aria-selected="false"
-            >Messages</a
-          >
-
-          <a
-            class="nav-link"
-            id="v-pills-settings-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-settings"
-            role="tab"
-            aria-controls="v-pills-settings"
-            aria-selected="false"
-            >Settings</a
+            >{{ category.value }}</a
           >
         </div>
 
         <div class="tab-content" id="v-pills-tabContent">
           <div
-            [ngClass]="{ 'show active': topic === 'home-0' }"
+            [ngClass]="{ 'show active': topic === topic }"
             class="tab-pane fade"
             id="v-pills-home"
             role="tabpanel"
@@ -81,11 +44,12 @@
           >
             <!-- style="width: 35rem" -->
 
-            <div *ngFor="let topicPostHome of topicsPostsHome">
+            <div *ngFor="let topicPost of posts">
+              {{ topicPost.category }}
               <ul>
                 <li>
                   <img
-                    src="../../../assets/images/{{ topicPostHome.postImg }}"
+                    src="../../../assets/images/{{ topicPost.postImg }}"
                     alt="Card image cap"
                     width="206"
                     height="116"
@@ -95,13 +59,13 @@
                   <div class="card-body">
                     <div id="postWriter">
                       <span class="primeryColor heading2">
-                        {{ topicPostHome.postTitle }}
+                        {{ topicPost.postTitle }}
                       </span>
                       <ul class="d-none d-lg-block">
                         <li>
                           <img
                             src="../../../assets/images/{{
-                              topicPostHome.postAuthor.avatarImg
+                              topicPost.postAuthor.avatarImg
                             }}"
                             class="rounded-circle"
                             alt=""
@@ -109,19 +73,19 @@
                         </li>
                         <li>
                           <h5 class="card-title">
-                            <a href="">{{ topicPostHome.postAuthor.name }}</a>
+                            <a href="">{{ topicPost.postAuthor.name }}</a>
                             on
                             <a href=""
-                              >{{ topicPostHome.postAuthor.authorPost }}
+                              >{{ topicPost.postAuthor.authorPost }}
                             </a>
-                            {{ topicPostHome.creationDate }}
+                            {{ topicPost.creationDate }}
                           </h5>
                         </li>
                       </ul>
                     </div>
 
                     <p class="card-text d-none d-lg-block">
-                      {{ topicPostHome.description }}
+                      {{ topicPost.description }}
                     </p>
                   </div>
                 </li>
@@ -129,174 +93,6 @@
             </div>
           </div>
 
-          <div
-            [ngClass]="{ 'show active': topic === 'profile-1' }"
-            class="tab-pane fade"
-            id="v-pills-profile"
-            role="tabpanel"
-            aria-labelledby="v-pills-profile-tab"
-          >
-            <div *ngFor="let profileTopicPost of topicPostsProfile">
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/{{ profileTopicPost.postImg }}"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        {{ profileTopicPost.postTitle }}
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/{{
-                              profileTopicPost.postAuthor.avatarImg
-                            }}"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">{{
-                              profileTopicPost.postAuthor.name
-                            }}</a>
-                            on
-                            <a href=""
-                              >{{ profileTopicPost.postAuthor.authorPost }}
-                            </a>
-                            {{ profileTopicPost.creationDate }}
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      {{ profileTopicPost.description }}
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="v-pills-messages"
-            role="tabpanel"
-            [ngClass]="{ 'show active': topic === 'messages-2' }"
-            aria-labelledby="v-pills-messages-tab"
-          >
-            <div *ngFor="let topicPostMessage of topicPostsMessages">
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/{{ topicPostMessage.postImg }}"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        {{ topicPostMessage.postTitle }}
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/{{
-                              topicPostMessage.postAuthor.avatarImg
-                            }}"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">{{
-                              topicPostMessage.postAuthor.name
-                            }}</a>
-                            on
-                            <a href=""
-                              >{{ topicPostMessage.postAuthor.authorPost }}
-                            </a>
-                            {{ topicPostMessage.creationDate }}
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      {{ topicPostMessage.description }}
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            [ngClass]="{ 'show active': topic === 'settings-2' }"
-            class="tab-pane fade"
-            id="v-pills-settings"
-            role="tabpanel"
-            aria-labelledby="v-pills-settings-tab"
-          >
-            <div *ngFor="let topicPostSetting of topicPostsSettings">
-              <ul>
-                <li>
-                  <img
-                    src="../../../assets/images/{{ topicPostSetting.postImg }}"
-                    alt="Card image cap"
-                    width="206"
-                    height="116"
-                  />
-                </li>
-                <li>
-                  <div class="card-body">
-                    <div id="postWriter">
-                      <span class="primeryColor heading2">
-                        {{ topicPostSetting.postTitle }}
-                      </span>
-                      <ul class="d-none d-lg-block">
-                        <li>
-                          <img
-                            src="../../../assets/images/{{
-                              topicPostSetting.postAuthor.avatarImg
-                            }}"
-                            class="rounded-circle"
-                            alt=""
-                          />
-                        </li>
-                        <li>
-                          <h5 class="card-title">
-                            <a href="">{{
-                              topicPostSetting.postAuthor.name
-                            }}</a>
-                            on
-                            <a href=""
-                              >{{ topicPostSetting.postAuthor.authorPost }}
-                            </a>
-                            {{ topicPostSetting.creationDate }}
-                          </h5>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <p class="card-text d-none d-lg-block">
-                      {{ topicPostSetting.description }}
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
           <div class="container topicButtons d-flex">
             <div class="mr-auto p-2">
               <button mat-stroked-button color="primary">Newer Posts</button>

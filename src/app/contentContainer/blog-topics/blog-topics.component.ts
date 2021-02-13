@@ -12,19 +12,20 @@ import { PostDataService } from '../shared/post-data.service';
   styleUrls: ['./blog-topics.component.scss'],
 })
 export class BlogTopicsComponent implements OnInit {
-  topic = 'home-0';
+  topic = 'home';
   topics: Topics[] = [
-    { value: 'home-0', viewValue: 'Home' },
-    { value: 'profile-1', viewValue: 'Profile' },
-    { value: 'messages-2', viewValue: 'Messages' },
-    { value: 'settings-2', viewValue: 'Settings' },
+    { value: 'home', viewValue: 'Home' },
+    { value: 'profile', viewValue: 'Profile' },
+    { value: 'messages', viewValue: 'Messages' },
+    { value: 'settings', viewValue: 'Settings' },
   ];
 
-  constructor(private blogTopicsComponent: PostDataService) {}
-  topicsPostsHome = this.blogTopicsComponent.topicPostsHome;
-  topicPostsProfile = this.blogTopicsComponent.topicPostsProfile;
-  topicPostsMessages = this.blogTopicsComponent.topicPostsMessages;
-  topicPostsSettings = this.blogTopicsComponent.topicPostsSettings;
+  constructor(private postDataService: PostDataService) {}
+  get posts() {
+    return this.postDataService.posts.filter((post) => {
+      return post.category === this.topic;
+    });
+  }
 
   ngOnInit(): void {}
 }
