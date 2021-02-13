@@ -30,6 +30,7 @@
             *ngFor="let category of topics"
             (click)="topic = category.value"
             class="nav-link"
+            [ngClass]="{ cruntActive: category.value == topic }"
             >{{ category.value }}</a
           >
         </div>
@@ -39,7 +40,6 @@
             <!-- style="width: 35rem" -->
 
             <div *ngFor="let topicPost of posts">
-              {{ topicPost.category }}
               <ul>
                 <li>
                   <img
