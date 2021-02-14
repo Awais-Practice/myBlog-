@@ -15,10 +15,10 @@
     <!-- dropdown container code start  here -->
   </div>
   <div class="row">
-    <div class="col-sm-10 m-auto p-2">
-      <div class="heading4 d-none d-lg-block">
-        <strong> TOPICS </strong>
-      </div>
+    <div
+      class="col-sm-10 m-auto p-2"
+      style="display: flex; justify-content: center"
+    >
       <div class="d-flex align-items-start">
         <div
           class="nav flex-column me-3 tabs d-none d-lg-block"
@@ -26,6 +26,9 @@
           role="tablist"
           aria-orientation="vertical"
         >
+          <div class="heading4 d-none d-lg-block">
+            <strong> TOPICS </strong>
+          </div>
           <a
             *ngFor="let category of topics"
             (click)="topic = category.value"
