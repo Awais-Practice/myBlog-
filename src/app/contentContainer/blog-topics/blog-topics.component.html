@@ -1,0 +1,102 @@
+<div class="container-fluid" id="topicContainer">
+  <div class="dropdown">
+    <!-- dropdown container code start  here -->
+    <mat-form-field
+      appearance="fill"
+      class="topicDropdown d-lg-none .d-md-block"
+    >
+      <mat-label>TOPICS</mat-label>
+      <mat-select [(value)]="topic">
+        <mat-option *ngFor="let topic of topics" [value]="topic.value">
+          {{ topic.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- dropdown container code start  here -->
+  </div>
+  <div class="row">
+    <div class="col-sm-10 m-auto p-2">
+      <div class="heading4 d-none d-lg-block">
+        <strong> TOPICS </strong>
+      </div>
+      <div class="d-flex align-items-start">
+        <div
+          class="nav flex-column me-3 tabs d-none d-lg-block"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <a
+            *ngFor="let category of topics"
+            (click)="topic = category.value"
+            class="nav-link"
+            [ngClass]="{ cruntActive: category.value == topic }"
+            >{{ category.value }}</a
+          >
+        </div>
+
+        <div class="tab-content" id="v-pills-tabContent">
+          <div [ngClass]="{ 'show active': topic === topic }">
+            <!-- style="width: 35rem" -->
+
+            <div *ngFor="let topicPost of posts">
+              <ul>
+                <li>
+                  <img
+                    src="../../../assets/images/{{ topicPost.postImg }}"
+                    alt="Card image cap"
+                    width="206"
+                    height="116"
+                  />
+                </li>
+                <li>
+                  <div class="card-body">
+                    <div id="postWriter">
+                      <span class="primeryColor heading2">
+                        {{ topicPost.postTitle }}
+                      </span>
+                      <ul class="d-none d-lg-block">
+                        <li>
+                          <img
+                            src="../../../assets/images/{{
+                              topicPost.postAuthor.avatarImg
+                            }}"
+                            class="rounded-circle"
+                            alt=""
+                          />
+                        </li>
+                        <li>
+                          <h5 class="card-title">
+                            <a href="">{{ topicPost.postAuthor.name }}</a>
+                            on
+                            <a href=""
+                              >{{ topicPost.postAuthor.authorPost }}
+                            </a>
+                            {{ topicPost.creationDate }}
+                          </h5>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p class="card-text d-none d-lg-block">
+                      {{ topicPost.description }}
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="container topicButtons d-flex">
+            <div class="mr-auto p-2">
+              <button mat-stroked-button color="primary">Newer Posts</button>
+            </div>
+            <div class="p-2">
+              <button mat-stroked-button color="primary">Older Posts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

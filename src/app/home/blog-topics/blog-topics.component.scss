@@ -16,16 +16,18 @@
     padding-right: 50px;
     a {
       border-radius: 20px;
+      margin-bottom: 8px;
+
       width: 200px;
       color: #6a7092;
       &:hover {
         background-color: #f2f8ff;
-        color: blue;
+        color: #0069fc;
       }
     }
     .cruntActive {
       background-color: #f2f8ff;
-      color: blue;
+      color: #0069fc;
     }
   }
   .tab-content {
