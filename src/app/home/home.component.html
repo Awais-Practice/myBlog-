@@ -1,5 +1,11 @@
 <div id="mainContant_container" style="border-top: 1px solid #cccc">
-  <app-new-offer></app-new-offer>
+  <app-alert
+    [text]="
+      'Get started on DigitalOcean with a $100, 60-day credit for new users.'
+    "
+    [boldText]="'Free credit active'"
+  ></app-alert>
+
   <app-featured-posts></app-featured-posts>
 </div>
 <app-blog-topics></app-blog-topics>
