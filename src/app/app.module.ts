@@ -7,6 +7,8 @@ import { NavbarHeaderModule } from './shared/modules/navbar-header/navbar-header
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategoriesModule } from './shared/components/categories/categories.module';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent],
@@ -16,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarHeaderModule,
     BrowserAnimationsModule,
     HomeModule,
+    CategoriesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
