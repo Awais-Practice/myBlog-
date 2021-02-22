@@ -6,8 +6,7 @@ import { FeaturedPostsComponent } from './featured-posts/featured-posts.componen
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { BlogTopicsComponent } from './blog-topics/blog-topics.component';
-import { MatSelectModule } from '@angular/material/select';
-
+import { CategoriesModule } from '../shared/components/categories/categories.module';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -15,7 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
     FeaturedPostsComponent,
     BlogTopicsComponent,
   ],
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatSelectModule],
+  imports: [CommonModule, MatButtonModule, MatCardModule, CategoriesModule],
   exports: [HomeComponent, AlertComponent],
 })
 export class HomeModule {}

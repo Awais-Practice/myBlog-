@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
-interface Topics {
-  value: string;
-  viewValue: string;
-}
+
 import { PostDataService } from '../../shared/services/post-data.service';
 
 @Component({
@@ -13,12 +10,7 @@ import { PostDataService } from '../../shared/services/post-data.service';
 })
 export class BlogTopicsComponent implements OnInit {
   topic = 'home';
-  topics: Topics[] = [
-    { value: 'home', viewValue: 'Home' },
-    { value: 'profile', viewValue: 'Profile' },
-    { value: 'messages', viewValue: 'Messages' },
-    { value: 'settings', viewValue: 'Settings' },
-  ];
+  topics = 'one';
 
   constructor(private postDataService: PostDataService) {}
   get posts() {

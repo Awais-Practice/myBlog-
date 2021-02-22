@@ -1,1 +1,8 @@
-<p>categories works!</p>
+<mat-form-field appearance="fill" class="topicDropdown d-lg-none .d-md-block">
+  <mat-label>TOPICS</mat-label>
+  <mat-select [(value)]="topic">
+    <mat-option *ngFor="let topic of topics" [value]="topic.value">
+      {{ topic.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
