@@ -10,7 +10,12 @@ import { PostDataService } from '../../shared/services/post-data.service';
 })
 export class BlogTopicsComponent implements OnInit {
   topic = 'home';
-  topics = 'one';
+  topics: any[] = [
+    { value: 'home', viewValue: 'Home' },
+    { value: 'profile', viewValue: 'Profile' },
+    { value: 'messages', viewValue: 'Messages' },
+    { value: 'settings', viewValue: 'Settings' },
+  ];
 
   constructor(private postDataService: PostDataService) {}
   get posts() {
