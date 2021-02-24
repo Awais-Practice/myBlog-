@@ -2,10 +2,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
-  templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.scss'],
+  templateUrl: './categoriesDropdown.component.html',
+  styleUrls: ['./categoriesDropdown.component.scss'],
 })
-export class CategoriesComponent {
+export class CategoriesDropdownComponent {
   topic = 'home';
 
   constructor() {}

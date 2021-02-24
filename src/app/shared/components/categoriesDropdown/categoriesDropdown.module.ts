@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoriesComponent } from './categories.component';
+import { CategoriesDropdownComponent } from './categoriesDropdown.component';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
-  declarations: [CategoriesComponent],
+  declarations: [CategoriesDropdownComponent],
   imports: [CommonModule, MatSelectModule],
-  exports: [CategoriesComponent],
+  exports: [CategoriesDropdownComponent],
 })
-export class CategoriesModule {}
+export class CategoriesDropdownModule {}

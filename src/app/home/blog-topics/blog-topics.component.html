@@ -1,12 +1,11 @@
 <div class="container-fluid" id="topicContainer">
-  <div class="dropdown">
-    <!-- dropdown container code start  here -->
-    <app-categories
-      [topics]="topics"
-      (slectedTopice)="getTopic($event)"
-    ></app-categories>
-    <!-- dropdown container code start  here -->
-  </div>
+  <!-- dropdown container code start  here -->
+  <app-categories
+    [topics]="topics"
+    (slectedTopice)="getTopic($event)"
+  ></app-categories>
+  <!-- dropdown container code start  here -->
+
   <div class="row">
     <div
       class="col-sm-10 m-auto p-2"

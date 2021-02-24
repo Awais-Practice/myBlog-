@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <mat-form-field appearance="fill" class="topicDropdown d-lg-none .d-md-block">
+    <mat-label>TOPICS</mat-label>
+    <mat-select [(value)]="topic">
+      <mat-option
+        *ngFor="let topic of topics"
+        [value]="topic.value"
+        (click)="getTopicValue(topic.value)"
+      >
+        {{ topic.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
