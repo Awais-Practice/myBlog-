@@ -1,8 +1,10 @@
 <div class="container-fluid" id="topicContainer">
   <div class="dropdown">
     <!-- dropdown container code start  here -->
-    <app-categories></app-categories>
-
+    <app-categories
+      [topics]="topics"
+      (slectedTopice)="getTopic($event)"
+    ></app-categories>
     <!-- dropdown container code start  here -->
   </div>
   <div class="row">

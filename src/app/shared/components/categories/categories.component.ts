@@ -1,23 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-interface Topics {
-  value: string;
-  viewValue: string;
-}
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss'],
 })
-export class CategoriesComponent implements OnInit {
-  constructor() {}
-  topic = 'test';
-  topics: Topics[] = [
-    { value: 'home', viewValue: 'Home' },
-    { value: 'profile', viewValue: 'Profile' },
-    { value: 'messages', viewValue: 'Messages' },
-    { value: 'settings', viewValue: 'Settings' },
-  ];
+export class CategoriesComponent {
+  topic = 'home';
 
-  ngOnInit(): void {}
+  constructor() {}
+
+  @Input('topics') topics;
+  @Output() slectedTopice = new EventEmitter<string>();
+
+  getTopicValue(topic) {
+    console.log(topic);
+
+    this.slectedTopice.emit(topic);
+  }
 }

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 
 import { PostDataService } from '../../shared/services/post-data.service';
+interface Topics {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-blog-topics',
@@ -10,7 +14,7 @@ import { PostDataService } from '../../shared/services/post-data.service';
 })
 export class BlogTopicsComponent implements OnInit {
   topic = 'home';
-  topics: any[] = [
+  topics: Topics[] = [
     { value: 'home', viewValue: 'Home' },
     { value: 'profile', viewValue: 'Profile' },
     { value: 'messages', viewValue: 'Messages' },
@@ -18,10 +22,15 @@ export class BlogTopicsComponent implements OnInit {
   ];
 
   constructor(private postDataService: PostDataService) {}
+
   get posts() {
     return this.postDataService.posts.filter((post) => {
       return post.category === this.topic;
     });
+  }
+  getTopic(topic) {
+    alert(topic);
+    this.topic = topic;
   }
 
   ngOnInit(): void {}
