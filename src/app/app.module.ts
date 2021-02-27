@@ -8,9 +8,10 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { from } from 'rxjs';
+import { PostsListComponent } from './posts-list/posts-list.component';
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent],
+  declarations: [AppComponent, FooterComponent, PostsListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
