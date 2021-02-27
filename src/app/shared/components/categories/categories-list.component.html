@@ -1,0 +1,19 @@
+<div
+  class="nav flex-column me-3 tabs d-none d-lg-block"
+  id="v-pills-tab"
+  role="tablist"
+  aria-orientation="vertical"
+>
+  <div class="heading4 d-none d-lg-block">
+    <strong> TOPICS </strong>
+  </div>
+
+  <a
+    *ngFor="let category of topics"
+    (click)="topic = category.value"
+    (click)="getValue(category.value)"
+    class="nav-link"
+    [ngClass]="{ cruntActive: category.value == topic }"
+    >{{ category.value }}</a
+  >
+</div>

@@ -2,34 +2,6 @@
   max-width: 800px;
 }
 #topicContainer {
-  padding-top: 70px;
-  .heading4 {
-    font-family: Sailec-Bold, Helvetica, san-serif;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: rgb(153, 161, 179);
-    display: block;
-    margin-bottom: 20px;
-  }
-  .tabs {
-    padding-right: 50px;
-    a {
-      border-radius: 20px;
-      margin-bottom: 8px;
-
-      width: 200px;
-      color: #6a7092;
-      &:hover {
-        background-color: #f2f8ff;
-        color: #0069fc;
-      }
-    }
-    .cruntActive {
-      background-color: #f2f8ff;
-      color: #0069fc;
-    }
-  }
   .tab-content {
     ul {
       display: flex;
@@ -47,11 +19,6 @@
 }
 .card-body {
   padding-top: 0px;
-}
-.dropdown {
-  .topicDropdown {
-    width: 100%;
-  }
 }
 
 .topicButtons {

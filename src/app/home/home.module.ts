@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { BlogTopicsComponent } from './blog-topics/blog-topics.component';
 import { CategoriesDropdownModule } from '../shared/components/categoriesDropdown/categoriesDropdown.module';
+import { CategoriesModule } from '../shared/components/categories/categories.module';
+import { PostDetailModule } from './post-detail/post-detail.module';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,8 @@ import { CategoriesDropdownModule } from '../shared/components/categoriesDropdow
     MatButtonModule,
     MatCardModule,
     CategoriesDropdownModule,
+    CategoriesModule,
+    PostDetailModule,
   ],
   exports: [HomeComponent, AlertComponent],
 })

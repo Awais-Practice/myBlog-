@@ -12,23 +12,10 @@
       style="display: flex; justify-content: center"
     >
       <div class="d-flex align-items-start">
-        <div
-          class="nav flex-column me-3 tabs d-none d-lg-block"
-          id="v-pills-tab"
-          role="tablist"
-          aria-orientation="vertical"
-        >
-          <div class="heading4 d-none d-lg-block">
-            <strong> TOPICS </strong>
-          </div>
-          <a
-            *ngFor="let category of topics"
-            (click)="topic = category.value"
-            class="nav-link"
-            [ngClass]="{ cruntActive: category.value == topic }"
-            >{{ category.value }}</a
-          >
-        </div>
+        <app-categories-list
+          [topics]="topics"
+          (topiceValue)="getTopic($event)"
+        ></app-categories-list>
 
         <div class="tab-content" id="v-pills-tabContent">
           <div [ngClass]="{ 'show active': topic === topic }">

@@ -29,7 +29,7 @@ export class BlogTopicsComponent implements OnInit {
     });
   }
   getTopic(topic) {
-    alert(topic);
+    console.log(topic);
     this.topic = topic;
   }
 
