@@ -11,6 +11,7 @@ import { CategoriesModule } from '../shared/components/categories/categories.mod
 import { PostDetailModule } from './post-detail/post-detail.module';
 
 import { from } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { from } from 'rxjs';
     CategoriesDropdownModule,
     CategoriesModule,
     PostDetailModule,
+    RouterModule,
   ],
   exports: [HomeComponent, AlertComponent],
 })

@@ -5,7 +5,11 @@
     </div>
     <div class="row m-auto d-flex">
       <!-- Featured posts start hear -->
-      <div class="col-lg-4 col-xs-12" *ngFor="let post of featuredPosts">
+      <div
+        class="col-lg-4 col-xs-12"
+        *ngFor="let post of featuredPosts"
+        routerLink="4"
+      >
         <div class="card">
           <img
             class="card-img-top"
@@ -24,7 +28,7 @@
                 </li>
                 <li>
                   <h5 class="card-title">
-                    <a href="">{{ post.postAuthor.name }}</a> on
+                    <a>{{ post.postAuthor.name }}</a> on
                     <a href="">
                       {{ post.postAuthor.authorPost }}
                     </a>
