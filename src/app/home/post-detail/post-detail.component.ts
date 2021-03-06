@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostDataService } from '../../shared/services/post-data.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-detail.component.scss'],
 })
 export class PostDetailComponent implements OnInit {
-  constructor() {}
+  topic = 'home';
+
+  constructor(private postDataservice: PostDataService) {}
+  topics = this.postDataservice.topics;
 
   ngOnInit(): void {}
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
-import { IPost } from './posts.model';
+import { IPost, Topics } from './posts.model';
 
 @Injectable({
   providedIn: 'root',
@@ -140,6 +140,13 @@ export class PostDataService {
       description:
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
+  ];
+
+  topics: Topics[] = [
+    { value: 'home', viewValue: 'Home' },
+    { value: 'profile', viewValue: 'Profile' },
+    { value: 'messages', viewValue: 'Messages' },
+    { value: 'settings', viewValue: 'Settings' },
   ];
 
   constructor() {}

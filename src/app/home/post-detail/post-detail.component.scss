@@ -1,0 +1,80 @@
+#postDetailContainer {
+  margin-top: 80px;
+  .postDetail {
+    .heading {
+      font-family: "Inter-Bold", Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 45px;
+      color: #031b4e;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .postDate {
+      font-size: 12px;
+      display: inline-block;
+      align-items: center;
+      margin: 0px 0px 30px;
+      color: rgba(51, 51, 51, 0.75);
+      word-spacing: 3px;
+      a {
+        text-decoration: none;
+      }
+    }
+    .postAuthor {
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+      .authorImg {
+        img {
+          border-radius: 50%;
+          margin-right: 10px;
+          object-fit: cover;
+          max-width: 70px;
+          width: 70px;
+          height: 70px;
+        }
+      }
+      .authorName {
+        margin-left: 5px;
+        font-size: 16px;
+        color: rgba(51, 51, 51, 0.75);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: inherit;
+        letter-spacing: 1px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .description {
+      margin-top: 40px;
+      p {
+        font-style: normal;
+        font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: #5b6987;
+      }
+    }
+    .heading2 {
+      font-family: "sans-serif";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      color: #031b4e;
+      margin-bottom: 0px;
+    }
+    ul {
+      color: #5b6987;
+      font-size: 16px;
+      padding-left: 15px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

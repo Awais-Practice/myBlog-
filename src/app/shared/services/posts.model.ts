@@ -10,3 +10,8 @@ export interface IPost {
   postTitle: string;
   description: string;
 }
+
+export interface Topics {
+  value: string;
+  viewValue: string;
+}
