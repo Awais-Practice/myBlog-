@@ -8,7 +8,8 @@
       <div
         class="col-lg-4 col-xs-12"
         *ngFor="let post of featuredPosts"
-        routerLink="4"
+        [routerLink]="['/post', post.id]"
+        style="outline: none !important"
       >
         <div class="card">
           <img

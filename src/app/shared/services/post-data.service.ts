@@ -36,7 +36,7 @@ export class PostDataService {
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
     {
-      id: 2,
+      id: 3,
       category: 'home',
       postImg: 'feture1.jpg',
       postAuthor: {
