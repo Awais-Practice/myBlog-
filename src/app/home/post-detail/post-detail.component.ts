@@ -16,9 +16,11 @@ export class PostDetailComponent implements OnInit {
     private routerService: Router
   ) {}
   topics = this.postDataservice.topics;
-
+  postData;
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.postData = this.postDataservice.posts;
+    this.postData = this.postData.filter((item) => item.id == id);
+    console.log(this.postData);
   }
 }

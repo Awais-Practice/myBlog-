@@ -6,16 +6,16 @@
         <div class="col-lg-3">
           <app-categories-list [topics]="topics"> </app-categories-list>
         </div>
-        <div class="col-lg-9 postDetail">
+        <div class="col-lg-9 postDetail" *ngFor="let post of postData">
           <h1 class="heading">
-            Introducing Premium Droplets with faster Intel and AMD CPUs and NVMe
-            SSD
+            {{ post.postTitle }}
           </h1>
           <span class="postDate">
             Posted 2021-02-23 in <a href="#">Product Updates</a>
           </span>
           <img
-            src="../../../assets/images/postDetail1.jpg"
+            src="../../../assets/images/{{ post.postImg }}
+"
             alt=""
             style="width: 100%"
           />

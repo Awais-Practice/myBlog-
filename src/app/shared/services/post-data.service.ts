@@ -17,7 +17,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: 'This is first featuredPosts id',
       description:
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
@@ -31,7 +31,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: 'This is  featuredPosts second id',
       description:
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
@@ -45,7 +45,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: 'This is thired featuredPosts id',
       description:
         'Starting a business is hard, we get it. It wasn’t so long ago that DigitalOcean was there too. There’s a lot to tackle.',
     },
@@ -62,7 +62,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: 'First post title',
       description:
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
@@ -76,7 +76,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: ' Second post title',
       description:
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
@@ -90,7 +90,7 @@ export class PostDataService {
         avatarImg: 'avtar1.jpeg',
       },
       creationDate: '10-22-2021',
-      postTitle: '  Jump-start your startup with DigitalOcean App Platform',
+      postTitle: 'This is third post id',
       description:
         'DigitalOcean Droplets are on-demand, Linux virtual machines suit ...',
     },
