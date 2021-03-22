@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostDataService } from '../../shared/services/post-data.service';
 
 @Component({
@@ -9,8 +10,15 @@ import { PostDataService } from '../../shared/services/post-data.service';
 export class PostDetailComponent implements OnInit {
   topic = 'home';
 
-  constructor(private postDataservice: PostDataService) {}
+  constructor(
+    private postDataservice: PostDataService,
+    private route: ActivatedRoute,
+    private routerService: Router
+  ) {}
   topics = this.postDataservice.topics;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+  }
 }
